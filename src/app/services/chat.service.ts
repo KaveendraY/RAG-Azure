@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import type { ChatMessage } from '../models/chat-message.model';
+import { ChatMessage } from '../models/chat-message.model';
 import { AzureAIService } from './azure-ai.service';
 
 @Injectable({

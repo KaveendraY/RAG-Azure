@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { delay } from 'rxjs/operators';
-import type { ChatMessage } from '../models/chat-message.model';
+import { ChatMessage } from '../models/chat-message.model';
 
 @Injectable({
   providedIn: 'root'
