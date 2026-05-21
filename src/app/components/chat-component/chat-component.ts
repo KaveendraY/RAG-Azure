@@ -1,11 +1,11 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewChecked } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ChatService } from '../../services/chat.service';
 import { DocumentService } from '../../services/document.service';
-import { ChatMessage } from '../../models/chat-message.model';
-import { Document } from '../../models/document.model';
+import type { ChatMessage } from '../../models/chat-message.model';
+import type { Document } from '../../models/document.model';
 import { ChatDocumentSelectorComponent } from './chat-document-selector/chat-document-selector.component';
+import { ChatService } from '../../services/chat.service';
 
 @Component({
   selector: 'app-chat',
