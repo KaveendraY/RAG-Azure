@@ -1,0 +1,9 @@
+{
+  "name": "RAG-Azure-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "echo \"No start script defined\" && exit 0"
+  },
+  "dependencies": {}
+}
