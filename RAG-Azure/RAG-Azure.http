@@ -1,0 +1,6 @@
+@RAG_Azure_HostAddress = http://localhost:5288
+
+GET {{RAG_Azure_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
