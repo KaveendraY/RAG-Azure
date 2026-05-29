@@ -41,17 +41,25 @@ import { CommonModule } from '@angular/common';
     }
     
     .upload-area {
-      border: 2px dashed var(--neutral-300);
+      border: 1px solid rgba(94, 125, 171, 0.18);
       border-radius: var(--border-radius-lg);
       padding: var(--space-5);
       text-align: center;
-      transition: all var(--transition-normal);
-      background-color: var(--neutral-50);
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal), background-color var(--transition-normal), border-color var(--transition-normal);
+      background-color: var(--surface);
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+    }
+    
+    .upload-area:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      background-color: var(--surface-soft);
     }
     
     .upload-area.active {
       border-color: var(--primary);
-      background-color: rgba(0, 120, 212, 0.05);
+      background-color: rgba(0, 120, 212, 0.08);
     }
     
     .upload-icon {
@@ -62,6 +70,8 @@ import { CommonModule } from '@angular/common';
     
     .upload-content h3 {
       margin-bottom: var(--space-2);
+      font-size: 1.4rem;
+      color: var(--neutral-900);
     }
     
     .upload-content p {
@@ -70,7 +80,7 @@ import { CommonModule } from '@angular/common';
     }
     
     .file-types {
-      font-size: 0.875rem;
+      font-size: 0.9rem;
       margin-top: var(--space-3);
       color: var(--neutral-500);
     }

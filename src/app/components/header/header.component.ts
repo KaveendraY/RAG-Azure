@@ -25,11 +25,13 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   `,
   styles: [`
     .header {
-      background-color: white;
+      background-color: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
       box-shadow: var(--shadow-sm);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 50;
+      border-bottom: 1px solid rgba(229, 234, 239, 0.9);
     }
     
     .header-content {
@@ -41,43 +43,36 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     
     .logo h1 {
       font-size: 1.5rem;
-      font-weight: 600;
+      font-weight: 700;
       margin: 0;
       color: var(--primary);
+      letter-spacing: 0.02em;
     }
     
     .nav-links {
       display: flex;
       list-style: none;
       gap: var(--space-4);
+      flex-wrap: wrap;
     }
     
     .nav-links a {
       text-decoration: none;
       color: var(--neutral-700);
-      font-weight: 500;
-      transition: color var(--transition-fast);
-      padding: var(--space-2);
+      font-weight: 600;
+      transition: color var(--transition-fast), transform var(--transition-fast);
+      padding: var(--space-2) var(--space-2);
+      border-radius: var(--border-radius-md);
     }
     
     .nav-links a:hover {
       color: var(--primary);
+      transform: translateY(-1px);
     }
     
     .nav-links a.active {
       color: var(--primary);
-      position: relative;
-    }
-    
-    .nav-links a.active::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: var(--primary);
-      border-radius: 2px;
+      background-color: rgba(0, 120, 212, 0.08);
     }
     
     @media (max-width: 768px) {
@@ -88,6 +83,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
       
       .nav-links {
         gap: var(--space-3);
+        justify-content: center;
       }
     }
   `]

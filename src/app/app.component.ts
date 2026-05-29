@@ -21,11 +21,14 @@ import { FooterComponent } from './components/footer/footer.component';
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      background-color: transparent;
     }
     
     .main-content {
       flex: 1;
-      padding: var(--space-3) 0;
+      padding: calc(var(--space-4) + 0.5rem) 0;
+      position: relative;
+      z-index: 1;
     }
   `]
 })

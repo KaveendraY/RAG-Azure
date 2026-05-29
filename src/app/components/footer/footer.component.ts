@@ -19,37 +19,40 @@ import { Component } from '@angular/core';
   `,
   styles: [`
     .footer {
-      background-color: var(--neutral-800);
+      background-color: var(--neutral-900);
       color: var(--neutral-300);
       padding: var(--space-4) 0;
       margin-top: auto;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
     
     .footer-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: var(--space-3);
     }
     
     .footer-links {
       display: flex;
       gap: var(--space-3);
+      flex-wrap: wrap;
     }
     
     .footer-links a {
       color: var(--neutral-300);
       text-decoration: none;
-      transition: color var(--transition-fast);
+      transition: color var(--transition-fast), transform var(--transition-fast);
     }
     
     .footer-links a:hover {
       color: white;
+      transform: translateY(-1px);
     }
     
     @media (max-width: 768px) {
       .footer-content {
         flex-direction: column;
-        gap: var(--space-3);
         text-align: center;
       }
     }

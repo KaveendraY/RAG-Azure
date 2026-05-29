@@ -45,14 +45,19 @@ import { Document } from '../../../models/document.model';
   styles: [`
     .document-selector {
       margin-top: var(--space-2);
+      padding: var(--space-3);
+      background-color: var(--surface);
+      border-radius: var(--border-radius-lg);
+      border: 1px solid rgba(94, 125, 171, 0.12);
+      box-shadow: var(--shadow-sm);
     }
     
     .no-documents {
       color: var(--neutral-600);
-      background-color: var(--neutral-100);
+      background-color: var(--surface-soft);
       padding: var(--space-3);
       border-radius: var(--border-radius-md);
-      font-size: 0.875rem;
+      font-size: 0.95rem;
       text-align: center;
     }
     
@@ -63,19 +68,20 @@ import { Document } from '../../../models/document.model';
     }
     
     .select-all {
-      margin-bottom: var(--space-2);
-      padding-bottom: var(--space-2);
-      border-bottom: 1px solid var(--neutral-200);
+      margin-bottom: var(--space-3);
+      padding-bottom: var(--space-3);
+      border-bottom: 1px solid rgba(94, 125, 171, 0.12);
     }
     
     .document-item {
-      padding: var(--space-2);
-      border-radius: var(--border-radius-sm);
-      transition: background-color var(--transition-fast);
+      padding: var(--space-3);
+      border-radius: var(--border-radius-md);
+      transition: background-color var(--transition-fast), transform var(--transition-fast);
     }
     
     .document-item:hover {
-      background-color: var(--neutral-100);
+      background-color: var(--surface-soft);
+      transform: translateY(-1px);
     }
     
     .document-item label, .select-all label {
@@ -86,10 +92,11 @@ import { Document } from '../../../models/document.model';
     }
     
     .document-name {
-      font-size: 0.875rem;
+      font-size: 0.95rem;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      color: var(--neutral-800);
     }
     
     input[type="checkbox"] {
@@ -100,7 +107,7 @@ import { Document } from '../../../models/document.model';
     
     .selected-info {
       margin-top: var(--space-3);
-      font-size: 0.75rem;
+      font-size: 0.85rem;
       color: var(--primary);
       text-align: center;
       padding: var(--space-2);

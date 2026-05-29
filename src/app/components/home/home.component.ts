@@ -55,42 +55,51 @@ import { RouterLink } from '@angular/router';
   styles: [`
     .hero {
       padding: var(--space-6) 0;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      background: linear-gradient(135deg, rgba(0, 120, 212, 0.95) 0%, rgba(92, 45, 145, 0.95) 100%);
       color: white;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
     
     .hero-content {
-      max-width: 800px;
+      max-width: 760px;
       margin: 0 auto;
+      position: relative;
+      z-index: 1;
     }
     
     .hero-title {
-      font-size: 3rem;
-      font-weight: 700;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 800;
       margin-bottom: var(--space-3);
+      letter-spacing: -0.04em;
     }
     
     .hero-subtitle {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       margin-bottom: var(--space-4);
-      opacity: 0.9;
+      opacity: 0.92;
+      max-width: 46rem;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     .hero-actions {
       display: flex;
       gap: var(--space-3);
       justify-content: center;
+      flex-wrap: wrap;
     }
     
     .hero-actions .btn-outline {
-      background-color: transparent;
-      border: 2px solid white;
+      background-color: rgba(255, 255, 255, 0.14);
+      border: 2px solid rgba(255, 255, 255, 0.32);
       color: white;
     }
     
     .hero-actions .btn-outline:hover {
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.18);
     }
     
     .features {
@@ -99,6 +108,7 @@ import { RouterLink } from '@angular/router';
     
     .section-title {
       margin-bottom: var(--space-5);
+      color: var(--neutral-800);
     }
     
     .feature-grid {
@@ -109,11 +119,17 @@ import { RouterLink } from '@angular/router';
     
     .feature-card {
       text-align: center;
-      transition: transform var(--transition-normal);
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(94, 125, 171, 0.15);
+      padding: var(--space-5);
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-sm);
     }
     
     .feature-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
     }
     
     .feature-icon {
@@ -128,8 +144,10 @@ import { RouterLink } from '@angular/router';
     .cta-content {
       text-align: center;
       padding: var(--space-5);
-      background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent) 100%);
+      background: linear-gradient(135deg, rgba(0, 133, 117, 0.95) 0%, rgba(0, 168, 148, 0.95) 100%);
       color: white;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-md);
     }
     
     .cta-content h2 {
@@ -138,20 +156,22 @@ import { RouterLink } from '@angular/router';
     
     .cta-content p {
       margin-bottom: var(--space-4);
+      opacity: 0.92;
     }
     
     .cta-content .btn-primary {
       background-color: white;
       color: var(--accent);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
     }
     
     .cta-content .btn-primary:hover {
-      background-color: var(--neutral-100);
+      background-color: #f5f7fb;
     }
     
     @media (max-width: 768px) {
       .hero-title {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
       
       .hero-subtitle {
@@ -165,7 +185,7 @@ import { RouterLink } from '@angular/router';
       
       .hero-actions .btn {
         width: 100%;
-        max-width: 240px;
+        max-width: 280px;
       }
     }
   `]

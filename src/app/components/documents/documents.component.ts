@@ -88,6 +88,11 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
       margin-bottom: var(--space-4);
     }
     
+    .documents-header h1 {
+      font-size: 2rem;
+      letter-spacing: -0.03em;
+    }
+    
     .documents-list {
       margin-top: var(--space-5);
     }
@@ -103,31 +108,44 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
       grid-column: 1 / -1;
       text-align: center;
       padding: var(--space-5);
-      background-color: var(--neutral-100);
-      border-radius: var(--border-radius-md);
+      background-color: var(--surface-soft);
+      border-radius: var(--border-radius-lg);
       color: var(--neutral-600);
+      border: 1px solid rgba(94, 125, 171, 0.14);
     }
     
     .document-card {
       display: flex;
       flex-direction: column;
-      transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+      padding: var(--space-4);
+      border: 1px solid transparent;
+      background-color: var(--surface);
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-sm);
     }
     
     .document-card:hover {
       transform: translateY(-5px);
-      box-shadow: var(--shadow-lg);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(0, 120, 212, 0.16);
     }
     
     .document-card.processing {
-      background-color: var(--neutral-50);
-      border: 1px dashed var(--neutral-300);
+      background-color: var(--surface-soft);
+      border: 1px dashed rgba(94, 125, 171, 0.24);
     }
     
     .document-icon {
-      font-size: 2.5rem;
-      margin-bottom: var(--space-2);
+      width: 60px;
+      height: 60px;
+      display: grid;
+      place-items: center;
+      font-size: 1.85rem;
+      margin-bottom: var(--space-3);
       color: var(--primary);
+      background-color: rgba(0, 120, 212, 0.08);
+      border-radius: 18px;
     }
     
     .document-info {
@@ -138,12 +156,13 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
       font-size: 1.25rem;
       margin-bottom: var(--space-1);
       word-break: break-word;
+      color: var(--neutral-800);
     }
     
     .document-meta {
       color: var(--neutral-600);
-      font-size: 0.875rem;
-      margin-bottom: var(--space-2);
+      font-size: 0.9rem;
+      margin-bottom: var(--space-3);
     }
     
     .document-progress {
@@ -151,32 +170,37 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
     }
     
     .progress-bar {
-      height: 8px;
+      height: 10px;
       background-color: var(--neutral-200);
-      border-radius: 4px;
+      border-radius: 999px;
       overflow: hidden;
-      margin-bottom: var(--space-1);
+      margin-bottom: var(--space-2);
     }
     
     .progress-fill {
       height: 100%;
-      background-color: var(--primary);
+      background: linear-gradient(90deg, var(--primary), var(--primary-light));
       transition: width 0.3s ease;
     }
     
     .progress-text {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       color: var(--neutral-600);
     }
     
     .document-actions {
       display: flex;
       gap: var(--space-2);
-      margin-top: var(--space-3);
+      margin-top: auto;
+      flex-wrap: wrap;
     }
     
     .documents-action {
       margin: var(--space-5) 0;
+    }
+    
+    .documents-action .cta-content {
+      text-align: center;
     }
     
     @media (max-width: 768px) {
